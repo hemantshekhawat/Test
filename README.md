@@ -1,7 +1,7 @@
 Spark Streaming with Kafka
 
 
-###build
+### build
 > Build the project
 * sbt clean compile assembly
 
