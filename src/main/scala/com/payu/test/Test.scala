@@ -1,7 +1,8 @@
 package com.payu.test
 
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.sql.streaming.ProcessingTime
+
 
 
 /**
@@ -10,21 +11,28 @@ import org.apache.spark.{SparkConf, SparkContext}
 object Test {
 
   def main(args: Array[String]): Unit = {
-    //Create conf object
-    val conf = new SparkConf().setAppName("Test Spark Session")
+    val spark = SparkSession
+      .builder()
+      .appName("Spark Structured Streaming Example")
+      .master("local[1]")
+      .getOrCreate()
 
-    //create spark context object
-    val sc = new SparkContext(conf)
+    import spark.implicits._
 
-    //create spark session
-    val spark = SparkSession.builder().config(conf).getOrCreate()
+    val df = spark
+      .readStream
+      .format("kafka")
+      .option("kafka.bootstrap.servers", "localhost:9092")
+      .option("subscribe", "spark_sql_test_topic")
+      .load()
 
-    val x = sc.parallelize(Seq("Test String"))
+    val values = df.selectExpr("CAST(value AS STRING)").as[String]
 
-    x.saveAsTextFile("/Users/hemant.singh/Desktop/sparkTest/")
-
-    spark.stop()
-    sc.stop()
+    values.writeStream
+      .trigger(ProcessingTime("5 seconds"))
+      .outputMode("append")
+      .format("console")
+      .start()
+      .awaitTermination()
   }
-
 }
