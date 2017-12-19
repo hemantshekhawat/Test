@@ -17,7 +17,7 @@
 
     >`spark-submit /path/to/jar-file`
     
-    `spark-submit target/scala-2.12/spark-streaming-test.jar`
+    `spark-submit target/scala-2.12/spark-streaming-test.jar localhost:9092 spark-topic`
 
 5. Send messages
 
