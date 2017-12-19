@@ -1,4 +1,4 @@
-Spark Streaming with Kafka
+# Spark Streaming with Kafka
 ## Local Usage
 
 1. Start ZooKeeper
@@ -14,6 +14,10 @@ Spark Streaming with Kafka
     `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 4 --topic spark_sql_test_topic`
     
 4. Start Spark application
+
+    >`spark-submit /path/to/jar-file`
+    
+    `spark-submit target/scala-2.12/spark-streaming-test.jar`
 
 5. Send messages
 
