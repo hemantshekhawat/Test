@@ -1,0 +1,433 @@
+hemant.singh@hemantsingh.local [ ~/Sites/SparkTest ]$ spark-submit target/scala-2.11/spark-streaming-merchant.jar localhost:9092 spark-topic
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/12/20 12:21:42 INFO SparkContext: Running Spark version 2.2.0
+17/12/20 12:21:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/12/20 12:21:43 INFO SparkContext: Submitted application: merchantAmountStream
+17/12/20 12:21:43 INFO SecurityManager: Changing view acls to: hemant.singh
+17/12/20 12:21:43 INFO SecurityManager: Changing modify acls to: hemant.singh
+17/12/20 12:21:43 INFO SecurityManager: Changing view acls groups to:
+17/12/20 12:21:43 INFO SecurityManager: Changing modify acls groups to:
+17/12/20 12:21:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hemant.singh); groups with view permissions: Set(); users  with modify permissions: Set(hemant.singh); groups with modify permissions: Set()
+17/12/20 12:21:43 INFO Utils: Successfully started service 'sparkDriver' on port 59520.
+17/12/20 12:21:43 INFO SparkEnv: Registering MapOutputTracker
+17/12/20 12:21:43 INFO SparkEnv: Registering BlockManagerMaster
+17/12/20 12:21:43 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+17/12/20 12:21:43 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+17/12/20 12:21:43 INFO DiskBlockManager: Created local directory at /private/var/folders/1_/0h81n4ys0f78gw0bsn6zxgfw582106/T/blockmgr-ccb4f8f0-d411-4c08-ba99-99fb67ff4a36
+17/12/20 12:21:43 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+17/12/20 12:21:43 INFO SparkEnv: Registering OutputCommitCoordinator
+17/12/20 12:21:44 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/12/20 12:21:44 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.7:4040
+17/12/20 12:21:44 INFO SparkContext: Added JAR file:/Users/hemant.singh/Sites/SparkTest/target/scala-2.11/spark-streaming-merchant.jar at spark://192.168.1.7:59520/jars/spark-streaming-merchant.jar with timestamp 1513752704214
+17/12/20 12:21:44 INFO Executor: Starting executor ID driver on host localhost
+17/12/20 12:21:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59521.
+17/12/20 12:21:44 INFO NettyBlockTransferService: Server created on 192.168.1.7:59521
+17/12/20 12:21:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+17/12/20 12:21:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.7, 59521, None)
+17/12/20 12:21:44 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.7:59521 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.7, 59521, None)
+17/12/20 12:21:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.7, 59521, None)
+17/12/20 12:21:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.7, 59521, None)
+17/12/20 12:21:44 WARN KafkaUtils: overriding enable.auto.commit to false for executor
+17/12/20 12:21:44 WARN KafkaUtils: overriding auto.offset.reset to none for executor
+17/12/20 12:21:44 WARN KafkaUtils: overriding executor group.id to spark-executor-default
+17/12/20 12:21:44 WARN KafkaUtils: overriding receive.buffer.bytes to 65536 see KAFKA-3135
+17/12/20 12:21:45 INFO TransformedDStream: Duration for remembering RDDs set to 12000 ms for org.apache.spark.streaming.dstream.TransformedDStream@7af04fd1
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Duration for remembering RDDs set to 12000 ms for org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@37fde55d
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Storage level = Serialized 1x Replicated
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Remember interval = 12000 ms
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@37fde55d
+17/12/20 12:21:45 INFO MappedDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO MappedDStream: Storage level = Serialized 1x Replicated
+17/12/20 12:21:45 INFO MappedDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO MappedDStream: Remember interval = 2000 ms
+17/12/20 12:21:45 INFO MappedDStream: Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@c432138
+17/12/20 12:21:45 INFO ForEachDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO ForEachDStream: Storage level = Serialized 1x Replicated
+17/12/20 12:21:45 INFO ForEachDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO ForEachDStream: Remember interval = 2000 ms
+17/12/20 12:21:45 INFO ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@64f4d502
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Storage level = Serialized 1x Replicated
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Remember interval = 12000 ms
+17/12/20 12:21:45 INFO DirectKafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka010.DirectKafkaInputDStream@37fde55d
+17/12/20 12:21:45 INFO TransformedDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO TransformedDStream: Storage level = Memory Serialized 1x Replicated
+17/12/20 12:21:45 INFO TransformedDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO TransformedDStream: Remember interval = 12000 ms
+17/12/20 12:21:45 INFO TransformedDStream: Initialized and validated org.apache.spark.streaming.dstream.TransformedDStream@7af04fd1
+17/12/20 12:21:45 INFO WindowedDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO WindowedDStream: Storage level = Serialized 1x Replicated
+17/12/20 12:21:45 INFO WindowedDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO WindowedDStream: Remember interval = 2000 ms
+17/12/20 12:21:45 INFO WindowedDStream: Initialized and validated org.apache.spark.streaming.dstream.WindowedDStream@2d65bced
+17/12/20 12:21:45 INFO ForEachDStream: Slide time = 2000 ms
+17/12/20 12:21:45 INFO ForEachDStream: Storage level = Serialized 1x Replicated
+17/12/20 12:21:45 INFO ForEachDStream: Checkpoint interval = null
+17/12/20 12:21:45 INFO ForEachDStream: Remember interval = 2000 ms
+17/12/20 12:21:45 INFO ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@bdcd59c
+17/12/20 12:21:45 INFO ConsumerConfig: ConsumerConfig values:
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id =
+	connections.max.idle.ms = 540000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = default
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = kafka
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+17/12/20 12:21:45 WARN ConsumerConfig: The configuration 'value.serializer' was supplied but isn't a known config.
+17/12/20 12:21:45 WARN ConsumerConfig: The configuration 'key.serializer' was supplied but isn't a known config.
+17/12/20 12:21:45 INFO AppInfoParser: Kafka version : 0.11.0.1
+17/12/20 12:21:45 INFO AppInfoParser: Kafka commitId : c2a0d5f9b1f45bf5
+17/12/20 12:21:45 INFO AbstractCoordinator: Discovered coordinator 192.168.1.7:9092 (id: 2147483647 rack: null) for group default.
+17/12/20 12:21:45 INFO ConsumerCoordinator: Revoking previously assigned partitions [] for group default
+17/12/20 12:21:45 INFO AbstractCoordinator: (Re-)joining group default
+17/12/20 12:21:45 INFO AbstractCoordinator: Successfully joined group default with generation 3
+17/12/20 12:21:45 INFO ConsumerCoordinator: Setting newly assigned partitions [spark-topic-0] for group default
+17/12/20 12:21:45 INFO RecurringTimer: Started timer for JobGenerator at time 1513752706000
+17/12/20 12:21:45 INFO JobGenerator: Started JobGenerator at 1513752706000 ms
+17/12/20 12:21:45 INFO JobScheduler: Started JobScheduler
+17/12/20 12:21:45 INFO StreamingContext: StreamingContext started
+17/12/20 12:21:46 INFO TransformedDStream: Slicing from 1513752698000 ms to 1513752706000 ms (aligned to 1513752698000 ms and 1513752706000 ms)
+17/12/20 12:21:46 INFO TransformedDStream: Time 1513752704000 ms is invalid as zeroTime is 1513752704000 ms , slideDuration is 2000 ms and difference is 0 ms
+got offset ranges on the driver:
+OffsetRange(topic: 'spark-topic', partition: 0, range: [0 -> 150])
+number of kafka partitions before windowing: 1
+number of spark partitions before windowing: 1
+17/12/20 12:21:46 ERROR KafkaRDD: Kafka ConsumerRecord is not serializable. Use .map to extract fields before calling .persist or .window
+17/12/20 12:21:46 INFO JobScheduler: Added jobs for time 1513752706000 ms
+17/12/20 12:21:46 INFO JobScheduler: Starting job streaming job 1513752706000 ms.0 from job set of time 1513752706000 ms
+17/12/20 12:21:46 INFO SparkContext: Starting job: print at DailyStream.scala:61
+17/12/20 12:21:46 INFO DAGScheduler: Got job 0 (print at DailyStream.scala:61) with 1 output partitions
+17/12/20 12:21:46 INFO DAGScheduler: Final stage: ResultStage 0 (print at DailyStream.scala:61)
+17/12/20 12:21:46 INFO DAGScheduler: Parents of final stage: List()
+17/12/20 12:21:46 INFO DAGScheduler: Missing parents: List()
+17/12/20 12:21:46 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at map at DailyStream.scala:61), which has no missing parents
+17/12/20 12:21:46 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 3.0 KB, free 366.3 MB)
+17/12/20 12:21:46 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1967.0 B, free 366.3 MB)
+17/12/20 12:21:46 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.7:59521 (size: 1967.0 B, free: 366.3 MB)
+17/12/20 12:21:46 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+17/12/20 12:21:46 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at map at DailyStream.scala:61) (first 15 tasks are for partitions Vector(0))
+17/12/20 12:21:46 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+17/12/20 12:21:46 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 4709 bytes)
+17/12/20 12:21:46 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/12/20 12:21:46 INFO Executor: Fetching spark://192.168.1.7:59520/jars/spark-streaming-merchant.jar with timestamp 1513752704214
+17/12/20 12:21:46 INFO TransportClientFactory: Successfully created connection to /192.168.1.7:59520 after 30 ms (0 ms spent in bootstraps)
+17/12/20 12:21:46 INFO Utils: Fetching spark://192.168.1.7:59520/jars/spark-streaming-merchant.jar to /private/var/folders/1_/0h81n4ys0f78gw0bsn6zxgfw582106/T/spark-2003ff2d-7804-40de-ba0d-3ce9734ef1e9/userFiles-2720379d-5732-4471-bc9f-008f0c7f9ce1/fetchFileTemp2765877481457544466.tmp
+17/12/20 12:21:46 INFO Executor: Adding file:/private/var/folders/1_/0h81n4ys0f78gw0bsn6zxgfw582106/T/spark-2003ff2d-7804-40de-ba0d-3ce9734ef1e9/userFiles-2720379d-5732-4471-bc9f-008f0c7f9ce1/spark-streaming-merchant.jar to class loader
+17/12/20 12:21:46 INFO KafkaRDD: Computing topic spark-topic, partition 0 offsets 0 -> 150
+17/12/20 12:21:46 INFO CachedKafkaConsumer: Initializing cache 16 64 0.75
+17/12/20 12:21:46 INFO CachedKafkaConsumer: Cache miss for CacheKey(spark-executor-default,spark-topic,0)
+17/12/20 12:21:46 INFO ConsumerConfig: ConsumerConfig values:
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id =
+	connections.max.idle.ms = 540000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-executor-default
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = kafka
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+17/12/20 12:21:46 WARN ConsumerConfig: The configuration 'value.serializer' was supplied but isn't a known config.
+17/12/20 12:21:46 WARN ConsumerConfig: The configuration 'key.serializer' was supplied but isn't a known config.
+17/12/20 12:21:46 INFO AppInfoParser: Kafka version : 0.11.0.1
+17/12/20 12:21:46 INFO AppInfoParser: Kafka commitId : c2a0d5f9b1f45bf5
+17/12/20 12:21:46 INFO CachedKafkaConsumer: Initial fetch for spark-executor-default spark-topic 0 0
+17/12/20 12:21:46 WARN BlockManager: Putting block rdd_0_0 failed due to an exception
+17/12/20 12:21:46 WARN BlockManager: Block rdd_0_0 could not be removed as it was not found on disk or in memory
+17/12/20 12:21:46 ERROR Executor: Exception in task 0.0 in stage 0.0 (TID 0)
+java.io.NotSerializableException: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = ))
+	at org.apache.spark.serializer.SerializationDebugger$.improveException(SerializationDebugger.scala:40)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsBytes(MemoryStore.scala:372)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1055)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1029)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:969)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1029)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:760)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:334)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/12/20 12:21:46 ERROR TaskSetManager: Task 0.0 in stage 0.0 (TID 0) had a not serializable result: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = )); not retrying
+17/12/20 12:21:46 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+17/12/20 12:21:46 INFO TaskSchedulerImpl: Cancelling stage 0
+17/12/20 12:21:46 INFO DAGScheduler: ResultStage 0 (print at DailyStream.scala:61) failed in 0.507 s due to Job aborted due to stage failure: Task 0.0 in stage 0.0 (TID 0) had a not serializable result: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = ))
+17/12/20 12:21:46 INFO DAGScheduler: Job 0 failed: print at DailyStream.scala:61, took 0.769590 s
+17/12/20 12:21:46 INFO JobScheduler: Finished job streaming job 1513752706000 ms.0 from job set of time 1513752706000 ms
+17/12/20 12:21:46 INFO JobScheduler: Starting job streaming job 1513752706000 ms.1 from job set of time 1513752706000 ms
+17/12/20 12:21:46 ERROR JobScheduler: Error running job streaming job 1513752706000 ms.0
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0.0 in stage 0.0 (TID 0) had a not serializable result: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = ))
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1499)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1487)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1486)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1486)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1714)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1669)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1658)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:630)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2022)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2043)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2062)
+	at org.apache.spark.rdd.RDD$$anonfun$take$1.apply(RDD.scala:1354)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.RDD.take(RDD.scala:1327)
+	at org.apache.spark.streaming.dstream.DStream$$anonfun$print$2$$anonfun$foreachFunc$3$1.apply(DStream.scala:735)
+	at org.apache.spark.streaming.dstream.DStream$$anonfun$print$2$$anonfun$foreachFunc$3$1.apply(DStream.scala:734)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Task 0.0 in stage 0.0 (TID 0) had a not serializable result: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = ))
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1499)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1487)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1486)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1486)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1714)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1669)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1658)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:630)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2022)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2043)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2062)
+	at org.apache.spark.rdd.RDD$$anonfun$take$1.apply(RDD.scala:1354)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)number of spark partitions after windowing: 1
+
+	at org.apache.spark.rdd.RDD.take(RDD.scala:1327)
+	at org.apache.spark.streaming.dstream.DStream$$anonfun$print$2$$anonfun$foreachFunc$3$1.apply(DStream.scala:735)
+	at org.apache.spark.streaming.dstream.DStream$$anonfun$print$2$$anonfun$foreachFunc$3$1.apply(DStream.scala:734)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/12/20 12:21:46 INFO StreamingContext: Invoking stop(stopGracefully=false) from shutdown hook
+17/12/20 12:21:46 INFO ReceiverTracker: ReceiverTracker stopped
+17/12/20 12:21:46 INFO JobGenerator: Stopping JobGenerator immediately
+17/12/20 12:21:46 INFO RecurringTimer: Stopped timer for JobGenerator after time 1513752706000
+17/12/20 12:21:46 INFO JobGenerator: Stopped JobGenerator
+17/12/20 12:21:46 INFO SparkContext: Starting job: foreachPartition at DailyStream.scala:74
+17/12/20 12:21:46 INFO DAGScheduler: Got job 1 (foreachPartition at DailyStream.scala:74) with 1 output partitions
+17/12/20 12:21:46 INFO DAGScheduler: Final stage: ResultStage 1 (foreachPartition at DailyStream.scala:74)
+17/12/20 12:21:46 INFO DAGScheduler: Parents of final stage: List()
+17/12/20 12:21:46 INFO DAGScheduler: Missing parents: List()
+17/12/20 12:21:46 INFO DAGScheduler: Submitting ResultStage 1 (UnionRDD[2] at window at DailyStream.scala:71), which has no missing parents
+17/12/20 12:21:46 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.5 KB, free 366.3 MB)
+17/12/20 12:21:46 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 366.3 MB)
+17/12/20 12:21:46 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.7:59521 (size: 2.2 KB, free: 366.3 MB)
+17/12/20 12:21:46 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+17/12/20 12:21:46 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (UnionRDD[2] at window at DailyStream.scala:71) (first 15 tasks are for partitions Vector(0))
+17/12/20 12:21:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+17/12/20 12:21:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 4818 bytes)
+17/12/20 12:21:47 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+17/12/20 12:21:47 INFO KafkaRDD: Computing topic spark-topic, partition 0 offsets 0 -> 150
+17/12/20 12:21:47 INFO CachedKafkaConsumer: Initial fetch for spark-executor-default spark-topic 0 0
+17/12/20 12:21:47 WARN BlockManager: Putting block rdd_0_0 failed due to an exception
+17/12/20 12:21:47 WARN BlockManager: Block rdd_0_0 could not be removed as it was not found on disk or in memory
+17/12/20 12:21:47 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 1)
+java.io.NotSerializableException: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = ))
+	at org.apache.spark.serializer.SerializationDebugger$.improveException(SerializationDebugger.scala:40)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsBytes(MemoryStore.scala:372)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1055)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1029)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:969)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1029)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:760)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:334)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.UnionRDD.compute(UnionRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+17/12/20 12:21:47 ERROR TaskSetManager: Task 0.0 in stage 1.0 (TID 1) had a not serializable result: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = )); not retrying
+17/12/20 12:21:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+17/12/20 12:21:47 INFO TaskSchedulerImpl: Cancelling stage 1
+17/12/20 12:21:47 INFO DAGScheduler: ResultStage 1 (foreachPartition at DailyStream.scala:74) failed in 0.368 s due to Job aborted due to stage failure: Task 0.0 in stage 1.0 (TID 1) had a not serializable result: org.apache.kafka.clients.consumer.ConsumerRecord
+Serialization stack:
+	- object not serializable (class: org.apache.kafka.clients.consumer.ConsumerRecord, value: ConsumerRecord(topic = spark-topic, partition = 0, offset = 0, CreateTime = 1513342504886, serialized key size = -1, serialized value size = 0, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = ))
+17/12/20 12:21:47 INFO DAGScheduler: Job 1 failed: foreachPartition at DailyStream.scala:74, took 0.389913 s
+17/12/20 12:21:47 INFO JobScheduler: Finished job streaming job 1513752706000 ms.1 from job set of time 1513752706000 ms
+17/12/20 12:21:47 INFO JobScheduler: Stopped JobScheduler
+17/12/20 12:21:47 INFO StreamingContext: StreamingContext stopped successfully
+17/12/20 12:21:47 INFO SparkContext: Invoking stop() from shutdown hook
+17/12/20 12:21:47 INFO SparkUI: Stopped Spark web UI at http://192.168.1.7:4040
+17/12/20 12:21:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/12/20 12:21:47 INFO MemoryStore: MemoryStore cleared
+17/12/20 12:21:47 INFO BlockManager: BlockManager stopped
+17/12/20 12:21:47 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/12/20 12:21:47 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/12/20 12:21:47 INFO SparkContext: Successfully stopped SparkContext
+17/12/20 12:21:47 INFO ShutdownHookManager: Shutdown hook called
+17/12/20 12:21:47 INFO ShutdownHookManager: Deleting directory /private/var/folders/1_/0h81n4ys0f78gw0bsn6zxgfw582106/T/spark-2003ff2d-7804-40de-ba0d-3ce9734ef1e9
+hemant.singh@hemantsingh.local [ ~/Sites/SparkTest ]$
