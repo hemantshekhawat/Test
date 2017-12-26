@@ -11,7 +11,7 @@ assemblyJarName := "spark-streaming-merchant.jar"
 libraryDependencies ++= {
   Seq(
     "org.apache.spark" % "spark-core_2.11" % "2.2.0" % "provided",
-//    "org.apache.spark" % "spark-sql_2.11" % "2.2.0" % "provided",
+    "org.apache.spark" % "spark-sql_2.11" % "2.2.0" % "provided",
     "org.apache.spark" % "spark-streaming_2.11" % "2.2.0" % "provided",
 //  "org.apache.spark" % "spark-sql-kafka-0-10_2.11" % "2.2.1" ,
     "org.apache.spark" % "spark-mllib_2.11" % "2.2.1" % "provided",
