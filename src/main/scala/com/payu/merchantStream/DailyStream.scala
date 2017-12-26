@@ -16,8 +16,7 @@ object DailyStream {
         s"""
            |Usage: DailyStream <brokers> <topics>
            |  <brokers> is a list of one or more Kafka brokers
-           |  <topics> is a list of one or more kafka topics to consume from
-           |  <ssl> true if using SSL, false otherwise.
+           |  <topics> is a list of one or more kafka topics (comma seaparated) to consume from
            |
         """.stripMargin)
       System.exit(1)
