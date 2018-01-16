@@ -77,7 +77,7 @@ object DailyStream {
       .window(Seconds(60), Seconds(4)).foreachRDD { merchantRecord =>
         val df = sqlContext.read.schema(InputStreamSchema).json(merchantRecord)
         df.groupBy("merchant_id").sum("amount").show()
-        df.printSchema()
+//        df.printSchema()
     }
 
     // Start the computation

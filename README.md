@@ -31,3 +31,19 @@
 * spark-submit /path/to/jar-file
 
 
+### Local Execution
+
+> Start ZooKeeper and kafka 
+*  zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties
+
+> Create Topic
+* kafka-topics --zookeeper localhost:2181 --create --topic merchant-stream8 --partitions 1 --replication-factor 1
+
+> Run Kafka Console Priducer 
+* kafka-console-producer --broker-list localhost:9092 --topic merchant-stream9
+
+> Submit package to spark and run
+* spark-submit target/scala-2.11/spark-streaming-merchant.jar localhost:9092 merant-stream9
+
+
+
